@@ -1,0 +1,440 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Блок Яндекс Телемост - оставлен как в оригинале */
+.header1 {
+    color: #03020E;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+/* Стили для ссылки как кнопки */
+.project-type {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none; /* убираем подчеркивание */
+    color: inherit; /* наследуем цвет текста */
+    font-weight: 400;
+    font-size: 20px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 6px 12px;
+    margin: -6px -12px; /* компенсируем padding */
+    border-radius: 6px;
+    background: transparent;
+    outline: none;
+}
+
+/* Убираем стандартные стили ссылки */
+.project-type:visited,
+.project-type:active,
+.project-type:focus {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+}
+
+/* Эффекты при наведении */
+.project-type:hover {
+    opacity: 0.8;
+    background: rgba(3, 2, 14, 0.05); /* легкий фон при наведении */
+}
+
+.project-type:hover .type-arrow {
+    transform: rotate(-60deg);
+}
+
+/* Анимация при нажатии */
+.project-type:active {
+    transform: translateY(1px);
+    opacity: 0.7;
+}
+
+/* Стрелка */
+.type-arrow {
+    width: 20px;
+    height: 20px;
+    transform: rotate(-120deg);
+    transition: transform 0.3s ease;
+    object-fit: contain;
+}
+
+.b1 {
+    font-size: 48px;
+    font-weight: 600;
+    margin-top: 437px;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.description-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+    padding-bottom: 24px;
+    margin-bottom: 128px;
+}
+
+.b2 {
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.b3 {
+    font-weight: 400;
+    font-size: 20px;
+    white-space: nowrap;
+    color: #03020E;
+    margin: 0;
+}
+
+/* Главный контейнер для всего остального контента */
+.main-content-container {
+    max-width: 1128px;
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+/* Внешний контейнер для центрирования */
+.header2-wrapper {
+    display: flex;
+    margin: 128px 0;
+}
+
+/* Внутренний контейнер с вашими отступами */
+.header2 {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.c1 {
+    width: 420px;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #03020E;
+    white-space: nowrap;
+    margin: 0;
+    padding-right: 80px;
+    flex-shrink: 0;
+}
+
+.c2 {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #03020E;
+    margin: 0;
+    flex: 1;
+}
+
+.c3 {
+    font-size: 40px;
+    font-weight: 500;
+    color: #03020E;
+    padding-bottom: 28px;
+    margin: 0;
+}
+
+/* Контейнер для секций */
+.section-container {
+    width: 100%;
+    max-width: 1127px;
+    margin: 144px auto;
+}
+
+/* Контейнер для всех рядов */
+.emoji-containers {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 48px;
+}
+
+/* Один горизонтальный ряд */
+.emoji-row {
+    display: flex;
+}
+
+/* Секции внутри ряда */
+.row-section {
+    padding: 32px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.row-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.row-emoji {
+    font-size: 32px;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.row-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #03020E;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.row-subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #03020E;
+    margin: 0 0 12px 0;
+}
+
+.row-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #03020E;
+    margin: 0;
+}
+
+/* Эмодзи внутри текста */
+.inline-emoji {
+    font-size: 18px;
+    vertical-align: middle;
+    margin: 0 2px;
+}
+
+.description-containerr {
+    margin-bottom: 56px;
+}
+
+.container2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Контейнер для изображений */
+.case-container {
+    display: flex;
+    justify-content: center;
+    margin: 128px 0;
+    width: 100%;
+}
+
+.case-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* Контейнер для GIF */
+.gif-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 144px auto;
+    width: 100%;
+    max-width: 1128px;
+}
+
+.gif-wrapper {
+    width: 436px;
+    height: 958px;
+    border: 2px solid rgba(0, 0, 0, 0.08);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.gif-image {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* Секция с телефонами */
+.phones-section {
+    width: 100%;
+    margin: 144px 0;
+}
+
+.phones-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.phones-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.phone-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.phone-image {
+    width: 390px;
+    height: 844px;
+    border-radius: 25px;
+    object-fit: contain;
+    border: 2px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .main-content-container {
+        padding: 0 80px;
+    }
+}
+
+@media (max-width: 768px) {
+
+      .type-arrow {
+          width: 16px;
+          height: 16px;
+      }
+
+    .header1 {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .main-content-container {
+        padding: 0 24px;
+    }
+
+    .b1 {
+        font-size: 36px;
+        margin-top: 200px;
+    }
+
+    .description-container {
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 64px;
+    }
+
+    .header2-wrapper {
+        margin: 64px 0;
+    }
+
+    .header2 {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .c1 {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .c3 {
+        font-size: 32px;
+    }
+
+    .phones-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .phone-image {
+        width: 320px;
+        height: 692px;
+    }
+
+    .gif-wrapper {
+        width: 100%;
+        max-width: 436px;
+        height: auto;
+        min-height: 500px;
+    }
+
+    .emoji-row {
+        flex-direction: column;
+    }
+}
+.case-container {
+    display: flex;
+    justify-content: center;
+    margin: 64px 0;
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .header1 {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .main-content-container {
+        padding: 0 16px;
+    }
+
+    .b1 {
+        font-size: 28px;
+        margin-top: 150px;
+    }
+
+    .b2, .b3 {
+        font-size: 16px;
+    }
+
+    .description-container {
+        padding-bottom: 16px;
+    }
+
+    .c1, .c2 {
+        font-size: 18px;
+    }
+
+    .c3 {
+        font-size: 24px;
+    }
+
+    .phone-image {
+        width: 280px;
+        height: 606px;
+    }
+
+    .row-section {
+        padding: 20px;
+    }
+
+    .row-title, .row-subtitle {
+        font-size: 20px;
+    }
+
+    .row-text {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,73 @@
+/* ОТКЛЮЧАЕМ СТАНДАРТНЫЙ КУРСОР ТОЛЬКО КОГДА КАСТОМНЫЙ КУРСОР АКТИВЕН */
+html.has-custom-cursor,
+body.has-custom-cursor,
+.has-custom-cursor * {
+    cursor: none !important;
+}
+
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    z-index: 100001;
+    transform: translate3d(0, 0, 0);
+    mix-blend-mode: exclusion;
+    display: none; /* по умолчанию скрыт */
+}
+
+/* Показываем кастомный курсор только на устройствах с мышью */
+html.has-custom-cursor .custom-cursor {
+    display: block;
+}
+
+/* Сохраняем эффект exclusion в меню */
+body.menu-open .custom-cursor {
+    mix-blend-mode: exclusion;
+    filter: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.cursor-dot {
+    width: 14px;
+    height: 14px;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 9px;
+    left: 9px;
+}
+
+/* Убираем хвостик полностью */
+.cursor-trail {
+    display: none !important;
+}
+
+body {
+    background: #E5E5E5;
+    height: auto;
+}
+/* Медиа-запрос для тач-устройств - отключаем кастомный курсор */
+@media (hover: none) and (pointer: coarse) {
+    html, body, * {
+        cursor: auto !important;
+    }
+
+    .custom-cursor {
+        display: none !important;
+    }
+}
+
+/* Медиа-запрос для устройств с мышью - включаем кастомный курсор */
+@media (hover: hover) and (pointer: fine) {
+    html, body, * {
+        cursor: none !important;
+    }
+
+    .custom-cursor {
+        display: block !important;
+    }
+}

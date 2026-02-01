@@ -1,0 +1,40 @@
+/* Scroll words (Mynte-style) */
+.scroll-words {
+  background: inherit;
+  color: #0E0E0E;
+  padding: 80px 0;
+  margin-top: 96px; /* spacing from main */
+  width: 100%;
+}
+
+.scroll-words .container {
+  max-width: auto;
+  margin-left: 32px;
+  padding: 0;
+  margin-right: 32px;
+
+}
+
+.scroll-words__text {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 'Noto Sans';
+  font-weight: 400;
+  font-size: clamp(24px, 4vw, 36px);
+  line-height: 1.5;
+  color: #0E0E0E;
+  margin: 0; /* exact alignment */
+}
+
+.scroll-words__text .w {
+  opacity: 0.2;
+  transition: opacity 260ms ease;
+}
+
+.scroll-words__text .w.is-visible {
+  opacity: 1;
+}
+
+@media (max-width: 700px) {
+  .scroll-words {
+    padding: 64px 0;
+  }
+}

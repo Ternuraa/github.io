@@ -1,0 +1,12 @@
+.cursor-ball {
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+}
+
+.cursor-outline {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid #000;
+  transition: all 0.5s ease;
+}

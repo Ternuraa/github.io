@@ -1,65 +1,203 @@
-<!DOCTYPE html>  
-<html lang="ru">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Личный сайт Лизы Савельевой</title>  
-    <style>  
-        body {  
-            font-family: Arial, sans-serif;  
-            margin: 0;  
-            padding: 20px;  
-            line-height: 1.6;  
-        }  
-        header {  
-            background: #f0f0f0;  
-            padding: 20px;  
-            text-align: center;  
-        }  
-        .container {  
-            max-width: 800px;  
-            margin: 0 auto;  
-        }  
-        a {  
-            color: #007bff;  
-            text-decoration: none;  
-        }  
-        a:hover {  
-            text-decoration: underline;  
-        }  
-    </style>  
-</head>  
-<body>  
-    <div class="container">  
-        <header>  
-            <h1>Лиза Савельева</h1>  
-            <p>Портфолио и контактная информация</p>  
-        </header>  
-  
-        <section>  
-            <h2>Обо мне</h2>  
-            <p>Привет! Я Лиза Савельева, начинающий веб-разработчик и дизайнер.</p>  
-        </section>  
-  
-        <section>  
-            <h2>Навыки</h2>  
-            <ul>  
-                <li>HTML/CSS</li>  
-                <li>JavaScript</li>  
-                <li>Графический дизайн</li>  
-                <li>Работа с Photoshop</li>  
-            </ul>  
-        </section>  
-  
-        <section>  
-            <h2>Контакты</h2>  
-            <p>Email: lisa.saveleva@example.com</p>  
-            <p>Телефон: +7 (999) 123-45-67</p>  
-            <p>  
-                <a href="https://vk.com/lisa_saveleva">ВКонтакте</a> |  
-                <a href="https://t.me/lisa_saveleva">Telegram</a>  
-            </p>  
-        </section>  
-    </div>  
-</body>  
-</html>  
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisa Savelieva | Designer</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Стили курсора -->
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="js/cursor.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/slider-smooth.js"></script>
+    <script src="js/slider-with-reveal.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reveal-words.css">
+    <link rel="stylesheet" href="css/description.css">
+    <link rel="stylesheet" href="css/works-stripes.css">
+    <script src="js/reveal-words.js"></script>
+    <script src="js/works-stripes.js"></script>
+
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4K43DQEYC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y4K43DQEYC');
+</script>
+<body>
+  <header class="header">
+      <img src="images/logo.svg" alt="logo" class="logo">
+      <div class="menu-wrapper">
+          <div class="menu-letters">
+              <span class="letter-m">M</span>
+              <span class="letter-e">A</span>
+              <span class="letter-n">I</span>
+              <span class="letter-u">N</span>
+          </div>
+
+      </div>
+  </header>
+  <main>
+
+  <div class="custom-cursor">
+      <div class="cursor-dot"></div>
+      <div class="cursor-trail"></div>
+  </div>
+  <div class="hero-note">
+  <div class="p1">ОТ ИДЕИ</div>
+  <div class="figure">
+      <img src="images/project1-1.jpg" id="slider1" class="slider-img">
+  </div>
+  <div class="hero-note3">
+      <img src="images/heart.svg" alt="heart" class="heart-icon">
+      <div class="p1">Дизайн, который работает — <br> без лишних слов</div>
+  </div>
+</div>
+    <div class="hero-note1">
+        <div class="p1">ДО РАБОТАЮЩЕГО</div>
+        <div class="figure1">
+                <img src="images/project2-1.jpg" id="slider2" class="slider-img">
+            </div>
+    </div>
+
+    <div class="hero-note2">
+        <div class="p1">ИНТЕРФЕЙСА</div>
+        <div class="figure2">
+                <img src="images/project3-1.jpg" id="slider3" class="slider-img">
+            </div>
+            <img src="images/arrow.svg" alt="arrow" class="arrow-icon">
+        </div>
+
+
+  </main>
+<section class="works-stripes" id="works">
+  <div class="container">
+    <div class="works-list">
+      <div class="work-row" data-image="images/ЯндексТелемост.jpg" data-link="case1.html">
+        <div class="work-row__company">Яндекс Телемост</div>
+        <div class="work-row__meta">UX · Website · Mobile</div>
+      </div>
+      <div class="work-row" data-image="images/project1-2.jpg" data-link="https://studup.tech/">
+        <div class="work-row__company">StudUp</div>
+        <div class="work-row__meta">Website · UX · Design System</div>
+      </div>
+      <div class="work-row" data-image="images/project1-3.jpg" data-link="https://www.behance.net/gallery/232580119/redizajn-korporativnogo-sajta">
+        <div class="work-row__company">MagnitTech</div>
+        <div class="work-row__meta">Website · UX</div>
+      </div>
+      <div class="work-row" data-image="images/project1-1.jpg" data-link="https://www.behance.net/gallery/229819605/logotip-restorana-briz">
+        <div class="work-row__company">БРИЗ</div>
+        <div class="work-row__meta">Identity</div>
+      </div>
+    </div>
+    <div class="work-preview" aria-hidden="true">
+      <img alt="">
+    </div>
+  </div>
+</section>
+<footer class="footer" id="footer" aria-labelledby="footer-heading">
+  <div class="footer__inner">
+    <div class="footer__left">
+      <div class="footer__social-list">
+        <a class="footer__social-btn footer__social-btn--telegram" href="https://t.me/LisaSavelieva" target="_blank" rel="noopener">
+          <span class="visually-hidden">Telegram</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+            <path d="M17.94 2.44c.23-.95-.7-1.74-1.6-1.34L1.64 7.25c-.88.39-.86 1.65.03 2.02l3.43 1.4 1.46 5.37c.24.87 1.31 1.14 1.92.47l2.66-2.9 4.05 3.13c.81.63 2.02.19 2.25-.83l1.5-13.47Zm-3.18 3.05-6.1 6.7c-.1.11-.17.25-.2.4l-.48 2.45-1.02-3.76 7.8-5.79Z" fill="currentColor"/>
+          </svg>
+        </a>
+        <a class="footer__social-btn footer__social-btn--behance" href="https://www.behance.net/lisasavelieva" target="_blank" rel="noopener">
+          <span class="visually-hidden">Behance</span>
+          <span aria-hidden="true">Bē</span>
+        </a>
+      </div>
+      <a class="footer__policy" href="#">Политика обработки персональных данных</a>
+    </div>
+    <div class="footer__contacts">
+      <p class="footer__heading" id="footer-heading">Контакты</p>
+      <a class="footer__contact-link" href="mailto:savelievalisa@gmail.com">savelievalisa@gmail.com</a>
+      <a class="footer__contact-link" href="https://t.me/LisaSavelieva" target="_blank" rel="noopener">@LisaSavelieva (tg)</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const figures = document.querySelectorAll('.figure, .figure1, .figure2');
+    const arrow = document.querySelector('.arrow-icon');
+
+    // Проверяем, является ли устройство мобильным
+    const isMobile = window.innerWidth <= 768;
+
+    // Если не мобильное устройство, включаем параллакс
+    if (!isMobile) {
+        // Более плавный параллакс: rAF + мягкая S-кривая и меньшая амплитуда
+        let targetParallax = 0;
+        let currentParallax = 0;
+
+        const updateTarget = function() {
+            const scrollY = window.scrollY;
+            const maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+            const progress = Math.min(scrollY / maxScroll, 1);
+            const easeProgress = (1 - Math.cos(progress * Math.PI)) / 2; // smoother
+            targetParallax = easeProgress * 800; // меньшее смещение
+        };
+
+        const render = function() {
+            currentParallax += (targetParallax - currentParallax) * 0.60; // интерполяция
+            const transformValue = `translateY(-${currentParallax.toFixed(2)}px)`;
+            figures.forEach(function(figure) {
+                figure.style.transform = transformValue;
+            });
+            if (arrow) {
+                arrow.style.transform = transformValue;
+            }
+            requestAnimationFrame(render);
+        };
+
+        updateTarget();
+        render();
+        window.addEventListener('scroll', updateTarget, { passive: true });
+    } else {
+        // На мобильных убираем все трансформации
+        figures.forEach(function(figure) {
+            figure.style.transform = 'none';
+        });
+        if (arrow) {
+            arrow.style.transform = 'none';
+        }
+    }
+
+    // Также обрабатываем изменение размера окна
+    window.addEventListener('resize', function() {
+        const isMobileNow = window.innerWidth <= 768;
+
+        // Если стал мобильный вид, убираем трансформации
+        if (isMobileNow) {
+            figures.forEach(function(figure) {
+                figure.style.transform = 'none';
+            });
+            if (arrow) {
+                arrow.style.transform = 'none';
+            }
+            // Останавливаем параллакс (если он был запущен)
+            // Можно добавить флаг, но так как мы проверяем при загрузке,
+            // и resize срабатывает редко, оставим так
+        }
+    });
+});
+</script>
+
+
+
+</body>
+</html>

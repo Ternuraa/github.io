@@ -1,0 +1,250 @@
+.header {
+    display: flex; /* делаем флекс-контейнер */
+    justify-content: space-between; /* разнести элементы по краям */
+    align-items: center; /* вертикальное выравнивание */
+    padding: 0 0; /* отступы сверху/снизу */
+    margin-bottom: 40px; /* отступ снизу */
+}
+.menu-letters {
+  font-size: 32px;
+  line-height: 162.5px;
+  letter-spacing: 3.60px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  margin-right: 32px;
+  align-items: center;
+  margin-top: -36px;
+}
+.menu-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu-letters {
+    font-size: 40px;
+    line-height: 162.5px;
+    letter-spacing: 3.60px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    margin-right: 32px;
+    align-items: center;
+    margin-top: -36px;
+    display: flex;
+    position: relative;
+}
+
+/* Буква M - всегда видима */
+.letter-m {
+    opacity: 1;
+    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+}
+
+/* Буквы E, N, U - скрыты снизу */
+.letter-e, .letter-n, .letter-u {
+    opacity: 0;
+    transform: translate3d(0px, 110%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Задержки для каждой буквы */
+.letter-e { transition-delay: 0.05s; }
+.letter-n { transition-delay: 0.1s; }
+.letter-u { transition-delay: 0.15s; }
+
+/* Анимация при наведении на menu-wrapper */
+.menu-wrapper:hover .letter-e,
+.menu-wrapper:hover .letter-n,
+.menu-wrapper:hover .letter-u {
+    opacity: 1;
+    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+}
+
+/* Стили для полноэкранного меню */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
+                visibility 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+.menu-overlay-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.98);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    opacity: 0;
+    transform: scale(1.05);
+    transition: opacity 0.9s cubic-bezier(0.165, 0.84, 0.44, 1),
+                transform 0.9s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.menu-overlay.active .menu-overlay-background {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.menu-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10001;
+}
+
+.menu-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s,
+                transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+}
+
+.menu-overlay.active .menu-nav {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 64px;
+    font-weight: 300;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.menu-overlay.active .menu-link {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-overlay.active .menu-link:nth-child(1) {
+    transition-delay: 0.3s;
+}
+
+.menu-overlay.active .menu-link:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.menu-overlay.active .menu-link:nth-child(3) {
+    transition-delay: 0.5s;
+}
+
+.menu-overlay.active .menu-link:nth-child(4) {
+    transition-delay: 0.6s;
+}
+
+.menu-link:hover {
+    color: #ffffff;
+    transform: translateX(10px);
+}
+
+.menu-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
+.menu-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 10002;
+    opacity: 0;
+    transform: rotate(-90deg);
+    transition: opacity 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s,
+                transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+
+.menu-overlay.active .menu-close {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.menu-close:hover {
+    transform: rotate(90deg) scale(1.1);
+}
+
+/* Эффект blur для основного контента при открытом меню */
+body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+body.menu-open main,
+body.menu-open header {
+    filter: blur(15px) brightness(0.7);
+    transform: scale(0.95);
+    opacity: 0.8;
+    transition: filter 0.8s cubic-bezier(0.165, 0.84, 0.44, 1),
+                transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1),
+                opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    pointer-events: none;
+    will-change: filter, transform, opacity;
+}
+
+/* Убеждаемся, что курсор не наследует blur от main/header */
+body.menu-open .custom-cursor,
+body.menu-open .custom-cursor * {
+    filter: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+/* Анимация для буквы M при клике */
+.menu-wrapper.active .letter-m {
+    transform: scale(1.1);
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
