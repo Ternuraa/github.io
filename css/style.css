@@ -160,6 +160,12 @@ main {
     z-index: 1000;
 }
 
+/* Сердечки inline — скрыты на десктопе */
+.heart-inline,
+.heart-inline-end {
+    display: none;
+}
+
 
 .arrow-icon {
     position: absolute;
@@ -242,60 +248,125 @@ main {
   border: 0;
 }
 
-/* Мобильная версия — сохраняем структуру как на ПК */
+/* Мобильная версия — чистая типографика */
 @media (max-width: 600px) {
-  .hero-note {
-    margin-left: 3vw;
-    margin-right: 3vw;
-    padding: 0.5vw;
-    flex-wrap: nowrap;
-    gap: 2vw;
-    font-size: 7vw;
+  main {
+    margin-top: 25vw;
   }
 
-  .hero-note1,
+  .hero-note {
+    margin: 0 5vw;
+    padding: 0;
+    display: block;
+    font-size: 8vw;
+  }
+
+  .hero-note1 {
+    margin: 6vw 5vw 0;
+    padding: 0;
+    display: block;
+    font-size: 8vw;
+    text-align: right;
+  }
+
   .hero-note2 {
-    margin-left: 3vw;
-    margin-right: 3vw;
-    margin-top: 1vw;
-    padding: 0.5vw;
-    flex-wrap: nowrap;
-    gap: 2vw;
-    font-size: 7vw;
+    margin: 6vw 5vw 0;
+    padding: 0;
+    display: block;
+    font-size: 8vw;
+    text-align: left;
   }
 
   .p1 {
-    white-space: nowrap;
+    white-space: normal;
+    line-height: 1.2;
   }
 
-  .hero-note3 {
-    font-size: 2vw;
-    margin-left: 3vw;
-  }
-
-  .heart-icon {
-    width: 2vw;
-    height: 2vw;
-    margin-top: -2.5vw;
-  }
-
+  /* Скрываем картинки на мобильных */
   .figure,
   .figure1,
   .figure2 {
-    width: 20vw;
-    height: 12vw;
+    display: none;
   }
 
-  .figure1 {
-    margin-left: 3vw;
+  /* Скрываем подпись с сердечком */
+  .hero-note3 {
+    display: none;
   }
 
+  .heart-icon {
+    display: none;
+  }
+
+  /* Показываем сердечко слева от ОТ ИДЕИ */
+  .heart-inline {
+    display: inline-block;
+    width: 6vw;
+    height: 6vw;
+    margin-right: 2vw;
+    vertical-align: middle;
+    filter: invert(27%) sepia(94%) saturate(6000%) hue-rotate(352deg) brightness(91%) contrast(92%);
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+
+  /* Показываем сердечко справа от ИНТЕРФЕЙСА */
+  .heart-inline-end {
+    display: inline-block;
+    width: 6vw;
+    height: 6vw;
+    margin-left: 2vw;
+    vertical-align: middle;
+    filter: invert(27%) sepia(94%) saturate(6000%) hue-rotate(352deg) brightness(91%) contrast(92%);
+    animation: heartbeat 1.5s ease-in-out infinite;
+    animation-delay: 0.3s;
+  }
+
+  /* Анимация биения сердца */
+  @keyframes heartbeat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    15% {
+      transform: scale(1.15);
+    }
+    30% {
+      transform: scale(1);
+    }
+    45% {
+      transform: scale(1.1);
+    }
+  }
+
+  /* Анимация появления текста */
+  .hero-note {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  .hero-note1 {
+    opacity: 0;
+    animation: slideUp 0.8s ease-out 0.2s forwards;
+  }
+
+  .hero-note2 {
+    opacity: 0;
+    animation: slideUp 0.8s ease-out 0.4s forwards;
+  }
+
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  /* Скрываем стрелку */
   .arrow-icon {
-    position: absolute;
-    right: 5vw;
-    top: 32vw;
-    width: 7vw;
-    height: 8vw;
+    display: none;
   }
 }
 

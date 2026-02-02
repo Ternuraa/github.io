@@ -309,18 +309,18 @@ body.menu-open .custom-cursor * {
 /* Адаптивность header для планшетов и мобильных — сохраняем пропорции */
 @media (max-width: 780px) {
     .header {
-        margin-bottom: 2vw;
+        margin-bottom: 3vw;
         padding: 0;
     }
 
     .logo-wrapper {
-        margin-left: 3vw;
+        margin-left: 4vw;
     }
 
     .logo-text {
-        font-size: 4vw;
-        line-height: 12vw;
-        letter-spacing: 0.3vw;
+        font-size: 7vw;
+        line-height: 16vw;
+        letter-spacing: 0.5vw;
     }
 
     /* Убираем анимацию логотипа — все буквы видны статично */
@@ -331,11 +331,11 @@ body.menu-open .custom-cursor * {
     }
 
     .menu-letters {
-        font-size: 4vw;
-        line-height: 12vw;
-        letter-spacing: 0.3vw;
-        margin-right: 3vw;
-        margin-top: -2vw;
+        font-size: 7vw;
+        line-height: 16vw;
+        letter-spacing: 0.5vw;
+        margin-right: 4vw;
+        margin-top: 0;
     }
 
     /* Убираем анимацию — все буквы видны статично */
@@ -346,19 +346,19 @@ body.menu-open .custom-cursor * {
     }
 
     .menu-link {
-        font-size: 8vw;
+        font-size: 10vw;
     }
 
     .menu-nav {
-        gap: 5vw;
+        gap: 6vw;
     }
 
     .menu-close {
         top: 4vw;
         right: 4vw;
-        width: 8vw;
-        height: 8vw;
-        font-size: 5vw;
+        width: 10vw;
+        height: 10vw;
+        font-size: 6vw;
     }
 }
 

@@ -15,11 +15,27 @@
   margin: 0; /* avoid overflow from margins */
   padding: 0 32px; /* 32px side gutters */
   box-sizing: border-box;
+}
 
+/* Заголовок секции */
+.works-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 3vw;
+  font-weight: 300;
+  color: #000;
+  margin: 0 0 3vw 0;
 }
 
 .works-list {
   border-top: 1px solid rgba(0,0,0,0.12);
+}
+
+/* Мобильные стили для заголовка */
+@media (max-width: 600px) {
+  .works-title {
+    font-size: 5vw;
+    margin-bottom: 5vw;
+  }
 }
 
 .work-row {
