@@ -27,6 +27,7 @@
         'gi'
     );
 
+
     /**
      * Обрабатывает текстовый узел
      */
@@ -36,7 +37,7 @@
 
         // Заменяем обычный пробел после короткого слова на неразрывный
         const newText = text.replace(pattern, '$1$2\u00A0');
-        
+
         if (newText !== text) {
             textNode.nodeValue = newText;
         }
@@ -51,7 +52,7 @@
         if (skipTags.includes(element.tagName)) return;
 
         const childNodes = Array.from(element.childNodes);
-        
+
         childNodes.forEach(node => {
             if (node.nodeType === Node.TEXT_NODE) {
                 processTextNode(node);
