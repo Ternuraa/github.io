@@ -450,7 +450,7 @@ body {
         display: none;
     }
 
-    /* Секции цель и контекст */
+    /* Секции цель и контекст  */
     .row-section.goal,
     .row-section.context {
         padding: 0;
