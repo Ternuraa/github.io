@@ -135,6 +135,8 @@ html, body {
     color: #03020E;
     margin: 0;
     flex: 1;
+    text-align: left;
+    hyphens: auto;
 }
 
 .c3 {

@@ -46,7 +46,7 @@ function startSimpleSlider(sliderConfig) {
     }
 
     // Запускаем интервал для автоматической смены
-    setInterval(switchToNextImage, 1000); // Меняем каждую секунду
+    setInterval(switchToNextImage, 2000); // Меняем каждую секунду
 
     // Первое переключение через 1 секунду
     setTimeout(switchToNextImage, 1000);
