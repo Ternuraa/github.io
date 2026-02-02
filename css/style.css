@@ -4,6 +4,10 @@ html, body {
   font-family: 'Inter', sans-serif;
 }
 
+main {
+  position: relative;
+}
+
 .logo {
     margin-left: 32px;
 }
@@ -50,16 +54,15 @@ html, body {
   }
 }
 .hero-note {
-    padding: 10px;
-    margin-left: 26px;
-    font-size: 114px;
+    padding: 0.5vw;
+    margin-left: 1.5vw;
+    font-size: 6vw;
     font-weight: 300;
     font-family: 'Inter', sans-serif;
     display: flex;
     align-items: center;
-    gap: 46px;
+    gap: 2.4vw;
     flex-wrap: nowrap;
-
 }
 
 .p1 {
@@ -68,8 +71,8 @@ html, body {
 }
 
 .figure, .figure1, .figure2 {
-    width: 252px;
-    height: 154px;
+    width: 18vw;
+    height: 11vw;
     border-radius: 0px;
     flex-shrink: 0;
     overflow: hidden;
@@ -117,174 +120,114 @@ html, body {
 
 .figure1 {
     order: -1;
-    margin-left: 26px;
+    margin-left: 1.5vw;
 }
 
 .hero-note1, .hero-note2 {
-    padding: 10px;
-    margin-top: 26px;
-    font-size: 114px;
+    padding: 0.5vw;
+    margin-top: 1.4vw;
+    font-size: 6vw;
     font-weight: 300;
     font-family: 'Inter', sans-serif;
     text-align: right;
     display: flex;
     align-items: center;
-    gap: 46px;
+    gap: 2.4vw;
     flex-wrap: nowrap;
 }
 
-.hero-note1 { margin-left: 26px; font-style: italic; }
-.hero-note2 { margin-left: 26px; }
+.hero-note1 { margin-left: 1.5vw; font-style: italic; }
+.hero-note2 { margin-left: 1.5vw; }
 
 .hero-note3 {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.9vw;
+    line-height: 1.4;
     font-weight: 400;
-    margin-left: 120px;
+    margin-left: 6vw;
     z-index: 1000;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
     position: relative;
-    gap: 6px;
-
+    gap: 0.3vw;
 }
 
 .heart-icon {
-    width: 14px;
-    height: 14px;
-    margin-top: -22px;
-
+    width: 0.9vw;
+    height: 0.9vw;
+    margin-top: -1.2vw;
     z-index: 1000;
-
 }
 
 
 .arrow-icon {
     position: absolute;
-    right: 156px;
-    top: 590px;
-    width: 94px;
-    height: 107px;
+    right: 8vw;
+    top: 30vw;
+    width: 5vw;
+    height: 5.6vw;
     z-index: 1002;
 }
 .block2 {
   margin-top: 96px;
 }
 .footer {
-  margin-top: 96px;
-  min-height: 310px;
+  margin-top: 10vw;
   width: 100%;
-  background-color: #0E0E0E;
-  color: #f5f5f5;
-  display: flex;
-  align-items: center;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
 }
 
 .footer__inner {
   width: 100%;
-  max-width: 1760px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 64px 32px;
+  padding: 4vw 3vw;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 64px;
-}
-
-.footer__left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 48px;
-  min-height: 182px;
-}
-
-.footer__social-list {
-  display: flex;
-  gap: 20px;
-}
-
-.footer__social-btn {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  border: 1px solid #3b3b3b;
-  background-color: transparent;
-  color: #f5f5f5;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
-.footer__social-btn:hover,
-.footer__social-btn:focus-visible {
-  border-color: #f5f5f5;
-  background-color: #171717;
-  color: #f5f5f5;
-  outline: none;
-}
-
-.footer__social-btn svg {
-  display: block;
-}
-
-.footer__social-btn--behance span[aria-hidden="true"] {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  letter-spacing: 0.5px;
-}
-
-.footer__policy {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  color: #a7a7a7;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.footer__policy:hover,
-.footer__policy:focus-visible {
-  color: #f5f5f5;
-  outline: none;
-}
-
-.footer__contacts {
+.footer__brand {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  align-items: flex-end;
-  text-align: right;
+  gap: 0.3vw;
 }
 
-.footer__heading {
-  margin: 0 0 12px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  letter-spacing: 0.4px;
-  color: #f5f5f5;
+.footer__name {
+  font-size: 1.2vw;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
-.footer__contact-link {
-  font-family: 'Inter', sans-serif;
+.footer__role {
+  font-size: 0.9vw;
+  color: #666;
   font-weight: 400;
-  font-size: 16px;
-  color: #d1d1d1;
+}
+
+.footer__links {
+  display: flex;
+  gap: 3vw;
+}
+
+.footer__link {
+  font-size: 0.9vw;
+  color: #888;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.footer__contact-link:hover,
-.footer__contact-link:focus-visible {
-  color: #ffffff;
-  outline: none;
+.footer__link:hover {
+  color: #fff;
+}
+
+.footer__copy {
+  font-size: 0.9vw;
+  color: #444;
 }
 
 .visually-hidden {
@@ -299,128 +242,100 @@ html, body {
   border: 0;
 }
 
-@media (max-width: 1200px) {
+/* Мобильная версия — сохраняем структуру как на ПК */
+@media (max-width: 600px) {
   .hero-note {
-    font-size: 96px;
-    gap: 32px;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    padding: 0.5vw;
+    flex-wrap: nowrap;
+    gap: 2vw;
+    font-size: 7vw;
   }
 
   .hero-note1,
   .hero-note2 {
-    font-size: 96px;
-    gap: 32px;
-  }
-
-  .figure,
-  .figure1,
-  .figure2 {
-    width: 220px;
-    height: 140px;
-  }
-
-  .arrow-icon {
-    top: 520px;
-    right: 120px;
-  }
-}
-
-@media (max-width: 900px) {
-  .hero-note,
-  .hero-note1,
-  .hero-note2 {
-    margin-left: 20px;
-    font-size: 72px;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-
-  .hero-note1,
-  .hero-note2 {
-    margin-left: 20px; /* БЫЛО 48px -> СТАЛО 20px */
-    margin-right: 20px; /* Добавим отступ справа для безопасности */
-    font-size: 42px; /* Чуть уменьшим шрифт, 48px может не влезть */
-    gap: 20px;
-    align-items: flex-start;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 1vw;
+    padding: 0.5vw;
+    flex-wrap: nowrap;
+    gap: 2vw;
+    font-size: 7vw;
   }
 
   .p1 {
-    white-space: normal;
+    white-space: nowrap;
   }
 
   .hero-note3 {
-    margin-left: 20px;
-    margin-top: 10px;
+    font-size: 2vw;
+    margin-left: 3vw;
+  }
+
+  .heart-icon {
+    width: 2vw;
+    height: 2vw;
+    margin-top: -2.5vw;
   }
 
   .figure,
   .figure1,
   .figure2 {
-    width: 100%; /* Растягиваем на всю ширину */
-    max-width: 100%; /* Убираем ограничение в 220px */
-    height: 200px; /* Делаем картинку повыше, чтобы было красиво */
-    margin: 10px 0; /* Отступы сверху и снизу */
+    width: 20vw;
+    height: 12vw;
+  }
+
+  .figure1 {
+    margin-left: 3vw;
   }
 
   .arrow-icon {
-    position: static;
-    width: 80px;
-    height: 88px;
-    margin-left: 20px;
-  }
-
-  .hero-note2 {
-    align-items: center;
-  }
-
-  .hero-note2 .arrow-icon {
-    order: 3;
-    margin-left: 12px;
-    margin-top: 0;
-    align-self: center;
+    position: absolute;
+    right: 5vw;
+    top: 32vw;
+    width: 7vw;
+    height: 8vw;
   }
 }
 
 @media (max-width: 768px) {
-  /* Перестраиваем футер в колонку */
   .footer {
-    height: auto; /* Убираем фиксированную высоту */
-    min-height: auto;
+    margin-top: 15vw;
   }
 
   .footer__inner {
-    flex-direction: column; /* Элементы друг под другом */
-    gap: 40px; /* Расстояние между блоками */
-    padding: 40px 20px; /* Уменьшаем внутренние отступы */
-    align-items: center; /* Центрируем всё */
+    flex-direction: column;
+    gap: 6vw;
+    padding: 8vw 5vw;
+    align-items: center;
     text-align: center;
   }
 
-  .footer__left,
-  .footer__contacts {
-    align-items: center; /* Центрируем тексты и кнопки */
-    text-align: center;
-    width: 100%;
-    min-height: auto;
+  .footer__brand {
+    align-items: center;
+    gap: 1vw;
   }
 
-  .footer__social-list {
-    justify-content: center;
-  }
-  .logo {
-      margin-left: 20px; /* Уменьшаем с 32px */
-      width: 100px; /* Если логотип большой, лучше ограничить */
+  .footer__name {
+    font-size: 4vw;
   }
 
-  .menu {
-      margin-right: 20px; /* Уменьшаем с 32px */
+  .footer__role {
+    font-size: 3vw;
   }
 
-  /* Если хедер флексовый, убедитесь что он влезает */
-  .header {
-      padding: 15px 0;
-  }
-  .arrow-icon {
-    display: none;
+  .footer__links {
+    flex-direction: column;
+    gap: 3vw;
+    align-items: center;
   }
 
+  .footer__link {
+    font-size: 3.5vw;
+  }
+
+  .footer__copy {
+    font-size: 3vw;
+  }
 }

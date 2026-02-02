@@ -3,17 +3,74 @@
     justify-content: space-between; /* разнести элементы по краям */
     align-items: center; /* вертикальное выравнивание */
     padding: 0 0; /* отступы сверху/снизу */
-    margin-bottom: 40px; /* отступ снизу */
+    margin-bottom: 2vw; /* отступ снизу */
 }
-.menu-letters {
-  font-size: 32px;
-  line-height: 162.5px;
-  letter-spacing: 3.60px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
-  margin-right: 32px;
-  align-items: center;
-  margin-top: -36px;
+
+/* Логотип с анимацией */
+.logo-wrapper {
+    text-decoration: none;
+    margin-left: 1.7vw;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo-text {
+    font-size: 2.1vw;
+    line-height: 8.5vw;
+    letter-spacing: 0.19vw;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    display: flex;
+    position: relative;
+    color: #000;
+}
+
+.logo-space {
+    width: 0.3em;
+}
+
+/* Контейнер буквы с overflow hidden */
+.logo-char {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+/* Все буквы логотипа */
+.logo-letter {
+    display: inline-block;
+}
+
+/* L и S (второй) — всегда видимы */
+.logo-l, .logo-s2 {
+    opacity: 1;
+    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+}
+
+/* Остальные буквы — скрыты снизу */
+.logo-i1, .logo-s1, .logo-a1, .logo-a2, .logo-v {
+    opacity: 0;
+    transform: translate3d(0px, 110%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Задержки для каждой буквы */
+.logo-i1 { transition-delay: 0.03s; }
+.logo-s1 { transition-delay: 0.06s; }
+.logo-a1 { transition-delay: 0.09s; }
+.logo-a2 { transition-delay: 0.03s; }
+.logo-v { transition-delay: 0.06s; }
+
+/* Анимация при наведении */
+.logo-wrapper:hover .logo-i1,
+.logo-wrapper:hover .logo-s1,
+.logo-wrapper:hover .logo-a1,
+.logo-wrapper:hover .logo-a2,
+.logo-wrapper:hover .logo-v {
+    opacity: 1;
+    transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
 }
 .menu-wrapper {
     display: flex;
@@ -22,14 +79,14 @@
 }
 
 .menu-letters {
-    font-size: 40px;
-    line-height: 162.5px;
-    letter-spacing: 3.60px;
+    font-size: 2.1vw;
+    line-height: 8.5vw;
+    letter-spacing: 0.19vw;
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-    margin-right: 32px;
+    margin-right: 1.7vw;
     align-items: center;
-    margin-top: -36px;
+    margin-top: -1.9vw;
     display: flex;
     position: relative;
 }
@@ -248,3 +305,61 @@ body.menu-open .custom-cursor * {
     transform: scale(1.1);
     transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
+
+/* Адаптивность header для планшетов и мобильных — сохраняем пропорции */
+@media (max-width: 780px) {
+    .header {
+        margin-bottom: 2vw;
+        padding: 0;
+    }
+
+    .logo-wrapper {
+        margin-left: 3vw;
+    }
+
+    .logo-text {
+        font-size: 4vw;
+        line-height: 12vw;
+        letter-spacing: 0.3vw;
+    }
+
+    /* Убираем анимацию логотипа — все буквы видны статично */
+    .logo-i1, .logo-s1, .logo-a1, .logo-a2, .logo-v {
+        opacity: 1;
+        transform: translate3d(0px, 0%, 0px);
+        transition: none;
+    }
+
+    .menu-letters {
+        font-size: 4vw;
+        line-height: 12vw;
+        letter-spacing: 0.3vw;
+        margin-right: 3vw;
+        margin-top: -2vw;
+    }
+
+    /* Убираем анимацию — все буквы видны статично */
+    .letter-e, .letter-n, .letter-u {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .menu-link {
+        font-size: 8vw;
+    }
+
+    .menu-nav {
+        gap: 5vw;
+    }
+
+    .menu-close {
+        top: 4vw;
+        right: 4vw;
+        width: 8vw;
+        height: 8vw;
+        font-size: 5vw;
+    }
+}
+
+/* Медиа-запросы для 480px и 380px убраны — теперь всё в vw и масштабируется автоматически */

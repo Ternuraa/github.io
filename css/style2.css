@@ -319,109 +319,266 @@ html, body {
     }
 }
 
-/* Адаптация таблицы с эмодзи для мобильных устройств */
+/* Минималистичная таблица для мобильных — студийный стиль */
 @media (max-width: 768px) {
     .emoji-containers {
-        gap: 32px; /* Увеличиваем расстояние между карточками */
+        gap: 0;
         margin-top: 32px;
+        border-top: 1px solid #e0e0e0;
     }
 
     .emoji-row {
         flex-direction: column;
         gap: 0;
-        overflow: hidden;
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        border-radius: 12px;
+        border-bottom: 1px solid #e0e0e0;
+        background: transparent;
+        padding: 24px 0;
     }
 
-    .row-section {
-        padding: 20px 24px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    }
-
-    .row-section:last-child {
-        border-bottom: none;
+    /* Секция с персонажем */
+    .row-section.characteristic {
+        padding: 0 0 16px 0;
     }
 
     .row-header {
-        gap: 12px;
-        margin-bottom: 8px;
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 0;
     }
 
     .row-emoji {
-        font-size: 24px;
-        width: 44px;
-        height: 44px;
-        border-radius: 8px;
+        font-size: 32px;
+        width: 48px;
+        height: 48px;
+        background: transparent;
+        border-radius: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
     }
 
     .row-title {
-        font-size: 20px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #000;
+        letter-spacing: -0.01em;
     }
 
-    /* Скрываем заголовки столбцов на мобильных */
+    /* Скрываем заголовки столбцов */
     .row-subtitle {
         display: none;
     }
 
+    /* Секции цель и контекст */
+    .row-section.goal,
+    .row-section.context {
+        padding: 0;
+        padding-left: 64px;
+        margin-top: 12px;
+        position: relative;
+    }
+
+    .row-section.context {
+        background: transparent;
+    }
+
+    /* Лейблы для секций */
+    .row-section.goal::before,
+    .row-section.context::before {
+        display: block;
+        font-size: 11px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 4px;
+        color: #888;
+    }
+
+    .row-section.goal::before {
+        content: 'Цель';
+    }
+
+    .row-section.context::before {
+        content: 'Контекст';
+    }
+
     .row-text {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 1.5;
+        color: #333;
+        margin: 0;
     }
 
     .inline-emoji {
-        font-size: 16px;
+        font-size: 14px;
     }
 
-    /* Первая строка (характеристика) на мобильных будет особой */
-    .emoji-row:first-child .characteristic {
-        padding-top: 24px;
-        padding-bottom: 24px;
-    }
-
-    /* Остальные характеристики без фона */
+    /* Убираем старые стили */
+    .emoji-row:first-child .characteristic,
     .emoji-row:not(:first-child) .characteristic {
-        padding-top: 16px;
+        padding-top: 0;
         padding-bottom: 16px;
     }
 
-    /* Для первого ряда убираем отступ у текста, так как заголовок скрыт */
     .emoji-row:first-child .goal .row-text,
     .emoji-row:first-child .context .row-text {
         margin-top: 0;
     }
 }
 
-/* Дополнительная адаптация для очень маленьких экранов */
+/* Адаптация для экранов до 480px */
 @media (max-width: 480px) {
-    .emoji-containers {
+    .header1 {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .main-content-container {
+        padding: 0 12px;
+    }
+
+    .b1 {
+        font-size: 26px;
+        margin-top: 100px;
+        margin-bottom: 6px;
+    }
+
+    .b2, .b3 {
+        font-size: 14px;
+    }
+
+    .project-type {
+        font-size: 14px;
+        padding: 4px 8px;
+        margin: -4px -8px;
+    }
+
+    .type-arrow {
+        width: 14px;
+        height: 14px;
+    }
+
+    .description-container {
+        gap: 12px;
+        padding-bottom: 12px;
+        margin-bottom: 40px;
+    }
+
+    .header2-wrapper {
+        margin: 32px 0;
+    }
+
+    .header2 {
+        gap: 12px;
+    }
+
+    .case-container {
+        margin: 32px 0;
+    }
+
+    .section-container {
+        margin: 32px auto;
+    }
+
+    .gif-container {
+        margin: 32px auto;
+    }
+
+    .phones-section {
+        margin: 32px 0;
+    }
+
+    .c1 {
+        font-size: 20px;
+    }
+
+    .c2 {
+        font-size: 14px;
+    }
+
+    .c3 {
+        font-size: 22px;
+        padding-bottom: 12px;
+    }
+
+    .gif-wrapper {
+        max-width: 240px;
+        padding: 10px;
+        border-radius: 16px;
+    }
+
+    .phone-image {
+        max-width: 240px;
+        border-radius: 16px;
+    }
+
+    .phone-item {
+        gap: 12px;
+    }
+
+    .phones-wrapper {
         gap: 24px;
     }
 
-    .emoji-row {
-        border-radius: 8px;
+    .row-subtitle {
+        font-size: 16px;
+        margin-bottom: 8px;
     }
 
-    .row-section {
-        padding: 16px 20px;
+    .description-containerr {
+        margin-bottom: 24px;
+    }
+
+    .container2 {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+
+    /* Таблица эмодзи — компактная */
+    .emoji-containers {
+        gap: 0;
+        margin-top: 24px;
+    }
+
+    .emoji-row {
+        padding: 20px 0;
+    }
+
+    .row-section.characteristic {
+        padding: 0 0 12px 0;
+    }
+
+    .row-section.goal,
+    .row-section.context {
+        padding-left: 52px;
+        margin-top: 10px;
+    }
+
+    .row-section.goal::before,
+    .row-section.context::before {
+        font-size: 10px;
+        margin-bottom: 3px;
     }
 
     .row-emoji {
         width: 40px;
         height: 40px;
-        font-size: 20px;
+        font-size: 24px;
     }
 
     .row-title {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .row-text {
-        font-size: 15px;
+        font-size: 14px;
+        line-height: 1.4;
     }
 
     .inline-emoji {
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 
@@ -450,7 +607,59 @@ html, body {
     }
 }
 
-@media (max-width: 480px) {
+/* Адаптация для планшетов и небольших экранов */
+@media (max-width: 900px) {
+    .header2 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .c1 {
+        width: 100%;
+        white-space: normal;
+        padding-right: 0;
+    }
+
+    .header2-wrapper {
+        margin: 80px 0;
+    }
+
+    .case-container {
+        margin: 80px 0;
+    }
+
+    .section-container {
+        margin: 80px auto;
+    }
+
+    .gif-container {
+        margin: 80px auto;
+    }
+
+    .phones-section {
+        margin: 80px 0;
+    }
+
+    .gif-wrapper {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+        aspect-ratio: 436 / 958;
+    }
+
+    .phone-image {
+        width: 280px;
+        height: auto;
+        aspect-ratio: 390 / 844;
+    }
+
+    .phones-wrapper {
+        gap: 40px;
+    }
+}
+
+/* Адаптация для мобильных телефонов */
+@media (max-width: 600px) {
     .header1 {
         margin-left: 16px;
         margin-right: 16px;
@@ -462,39 +671,228 @@ html, body {
 
     .b1 {
         font-size: 28px;
-        margin-top: 150px;
+        margin-top: 120px;
     }
 
     .b2, .b3 {
         font-size: 16px;
     }
 
-    .description-container {
-        padding-bottom: 16px;
+    .project-type {
+        font-size: 16px;
     }
 
-    .c1, .c2 {
-        font-size: 18px;
+    .type-arrow {
+        width: 16px;
+        height: 16px;
+    }
+
+    .description-container {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+        padding-bottom: 16px;
+        margin-bottom: 60px;
+    }
+
+    .header2-wrapper {
+        margin: 48px 0;
+    }
+
+    .case-container {
+        margin: 48px 0;
+    }
+
+    .section-container {
+        margin: 48px auto;
+    }
+
+    .gif-container {
+        margin: 48px auto;
+    }
+
+    .phones-section {
+        margin: 48px 0;
+    }
+
+    .c1 {
+        font-size: 22px;
+    }
+
+    .c2 {
+        font-size: 16px;
     }
 
     .c3 {
         font-size: 24px;
+        padding-bottom: 16px;
+    }
+
+    .gif-wrapper {
+        max-width: 260px;
+        padding: 12px;
+        border-radius: 20px;
     }
 
     .phone-image {
-        width: 280px;
-        height: 606px;
+        width: 100%;
+        max-width: 260px;
+        height: auto;
+        border-radius: 20px;
     }
 
-    .row-section {
-        padding: 20px;
+    .phones-wrapper {
+        gap: 32px;
     }
 
-    .row-title, .row-subtitle {
+    .row-subtitle {
+        font-size: 18px;
+    }
+
+    .description-containerr {
+        margin-bottom: 32px;
+    }
+
+    .container2 {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+}
+
+/* Адаптация для очень маленьких экранов (до 400px) */
+@media (max-width: 400px) {
+    .header1 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .main-content-container {
+        padding: 0 10px;
+    }
+
+    .b1 {
+        font-size: 22px;
+        margin-top: 80px;
+    }
+
+    .b2, .b3 {
+        font-size: 13px;
+    }
+
+    .project-type {
+        font-size: 13px;
+    }
+
+    .type-arrow {
+        width: 12px;
+        height: 12px;
+    }
+
+    .description-container {
+        gap: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 32px;
+    }
+
+    .header2-wrapper {
+        margin: 24px 0;
+    }
+
+    .case-container {
+        margin: 24px 0;
+    }
+
+    .section-container {
+        margin: 24px auto;
+    }
+
+    .gif-container {
+        margin: 24px auto;
+    }
+
+    .phones-section {
+        margin: 24px 0;
+    }
+
+    .c1 {
+        font-size: 18px;
+    }
+
+    .c2 {
+        font-size: 13px;
+    }
+
+    .c3 {
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+
+    .gif-wrapper {
+        max-width: 200px;
+        padding: 8px;
+        border-radius: 14px;
+    }
+
+    .phone-image {
+        max-width: 200px;
+        border-radius: 14px;
+    }
+
+    .phones-wrapper {
+        gap: 20px;
+    }
+
+    .row-subtitle {
+        font-size: 14px;
+    }
+
+    /* Таблица — ещё компактнее */
+    .emoji-containers {
+        gap: 0;
+        margin-top: 20px;
+    }
+
+    .emoji-row {
+        padding: 16px 0;
+    }
+
+    .row-section.characteristic {
+        padding: 0 0 10px 0;
+    }
+
+    .row-header {
+        gap: 12px;
+    }
+
+    .row-section.goal,
+    .row-section.context {
+        padding-left: 44px;
+        margin-top: 8px;
+    }
+
+    .row-section.goal::before,
+    .row-section.context::before {
+        font-size: 9px;
+        letter-spacing: 0.04em;
+        margin-bottom: 2px;
+    }
+
+    .row-emoji {
+        width: 32px;
+        height: 32px;
         font-size: 20px;
     }
 
+    .row-title {
+        font-size: 15px;
+    }
+
     .row-text {
-        font-size: 16px;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .inline-emoji {
+        font-size: 13px;
     }
 }
