@@ -319,7 +319,6 @@ html, body {
     }
 }
 
-
 /* Адаптация таблицы с эмодзи для мобильных устройств */
 @media (max-width: 768px) {
     .emoji-containers {
