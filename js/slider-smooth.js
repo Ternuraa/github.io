@@ -46,10 +46,10 @@ function startSimpleSlider(sliderConfig) {
     }
 
     // Запускаем интервал для автоматической смены
-    setInterval(switchToNextImage, 2000); // Меняем каждую секунду
+    setInterval(switchToNextImage, 1500); // Меняем каждую секунду
 
     // Первое переключение через 1 секунду
-    setTimeout(switchToNextImage, 1000);
+    setTimeout(switchToNextImage, 1500);
 }
 
 document.addEventListener('DOMContentLoaded', function() {

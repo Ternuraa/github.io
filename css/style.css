@@ -422,3 +422,132 @@ html, body {
   }
 
 }
+/* ОЧЕНЬ ШИРОКИЕ ЭКРАНЫ (больше 1920px) */
+@media (min-width: 1921px) {
+  .hero-text {
+    font-size: clamp(114px, 8vw, 200px); /* Увеличиваем шрифт на очень широких экранах */
+  }
+
+  .figure, .figure1, .figure2 {
+    width: clamp(252px, 20vw, 400px);
+    height: clamp(154px, 12vw, 240px);
+  }
+
+  .hero-note3 {
+    font-size: clamp(14px, 1.3vw, 20px);
+  }
+
+  .arrow-icon {
+    width: clamp(94px, 6vw, 140px);
+    height: clamp(107px, 7vw, 160px);
+  }
+}
+
+/* СУПЕРШИРОКИЕ ЭКРАНЫ (больше 2560px) */
+@media (min-width: 2561px) {
+  .hero-container {
+    max-width: 2400px; /* Увеличиваем максимальную ширину */
+    padding: 0 5vw; /* Динамические отступы */
+  }
+
+  .hero-text {
+    font-size: clamp(114px, 7vw, 180px);
+  }
+
+  .hero-text-block {
+    gap: 4vw; /* Динамический отступ между текстом и изображением */
+  }
+
+  .hero-note3 {
+    font-size: clamp(14px, 1.5vw, 24px);
+    max-width: 35vw; /* Ограничиваем ширину текста */
+  }
+}
+
+/* ЭКСТРАШИРОКИЕ ЭКРАНЫ (больше 3840px - 4K) */
+@media (min-width: 3841px) {
+  .hero-container {
+    max-width: 3200px; /* Еще больше для 4K */
+  }
+
+  .hero-text {
+    font-size: clamp(114px, 6vw, 240px);
+  }
+
+  .figure, .figure1, .figure2 {
+    width: clamp(252px, 18vw, 500px);
+    height: clamp(154px, 11vw, 300px);
+  }
+
+  .hero-note3 {
+    font-size: clamp(14px, 1.8vw, 32px);
+    line-height: 1.5;
+  }
+}
+
+/* АДАПТАЦИЯ НА ОЧЕНЬ ШИРОКИХ ЭКРАНАХ ДО 1920px */
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .hero-container {
+    max-width: 1600px; /* Немного меньше на Full HD */
+  }
+
+  .hero-text {
+    font-size: clamp(96px, 7vw, 130px);
+  }
+
+  .figure, .figure1, .figure2 {
+    width: clamp(220px, 18vw, 280px);
+    height: clamp(140px, 11vw, 170px);
+  }
+}
+
+/* ДИНАМИЧЕСКАЯ АДАПТАЦИЯ ДЛЯ ВСЕХ ШИРОКИХ ЭКРАНОВ */
+@media (min-width: 1201px) {
+  .hero-text {
+    font-size: clamp(72px, 5vw + 20px, 200px); /* Динамическая формула */
+  }
+
+  .hero-container {
+    padding: 0 max(32px, 5vw); /* Отступы увеличиваются на широких экранах */
+  }
+}
+
+/* ГИБКИЕ КОНТЕЙНЕРЫ ДЛЯ ШИРОКИХ ЭКРАНОВ */
+@media (min-width: 1600px) {
+  .hero-block {
+    gap: 4vw; /* Динамические отступы между блоками */
+  }
+
+  .hero-text-block {
+    gap: 3vw;
+  }
+
+  .hero-note3 {
+    margin-left: 8vw; /* Отступ увеличивается пропорционально */
+  }
+}
+
+/* ДОПОЛНИТЕЛЬНО: если хотите, чтобы контент РАСТЯГИВАЛСЯ на всю ширину без ограничений */
+/* .hero-container {
+  max-width: none;  Убираем ограничение максимальной ширины
+  padding: 0 10vw;  Делаем большие отступы по бокам
+} */
+
+/* АЛЬТЕРНАТИВА: если хотите фиксированные размеры на определенных брейкпоинтах */
+@media (min-width: 1921px) {
+  .hero-text {
+    font-size: 140px;
+  }
+}
+
+@media (min-width: 2561px) {
+  .hero-text {
+    font-size: 180px;
+  }
+}
+
+@media (min-width: 3841px) {
+  .hero-text {
+    font-size: 240px;
+  }
+}
