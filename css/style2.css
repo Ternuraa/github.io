@@ -391,6 +391,136 @@ html, body {
     margin: 64px 0;
     width: 100%;
 }
+/* Адаптация таблицы с эмодзи для мобильных устройств */
+@media (max-width: 768px) {
+    .emoji-containers {
+        gap: 32px; /* Увеличиваем расстояние между карточками */
+        margin-top: 32px;
+    }
+
+    .emoji-row {
+        flex-direction: column;
+        gap: 0;
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+    }
+
+    .row-section {
+        padding: 20px 24px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .row-section:last-child {
+        border-bottom: none;
+    }
+
+    .row-header {
+        gap: 12px;
+        margin-bottom: 8px;
+    }
+
+    .row-emoji {
+        font-size: 24px;
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+    }
+
+    .row-title {
+        font-size: 20px;
+    }
+
+    /* Скрываем заголовки столбцов на мобильных */
+    .row-subtitle {
+        display: none;
+    }
+
+    .row-text {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .inline-emoji {
+        font-size: 16px;
+    }
+
+    /* Первая строка (характеристика) на мобильных будет особой */
+    .emoji-row:first-child .characteristic {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    /* Остальные характеристики без фона */
+    .emoji-row:not(:first-child) .characteristic {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    /* Для первого ряда убираем отступ у текста, так как заголовок скрыт */
+    .emoji-row:first-child .goal .row-text,
+    .emoji-row:first-child .context .row-text {
+        margin-top: 0;
+    }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов */
+@media (max-width: 480px) {
+    .emoji-containers {
+        gap: 24px;
+    }
+
+    .emoji-row {
+        border-radius: 8px;
+    }
+
+    .row-section {
+        padding: 16px 20px;
+    }
+
+    .row-emoji {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .row-title {
+        font-size: 18px;
+    }
+
+    .row-text {
+        font-size: 15px;
+    }
+
+    .inline-emoji {
+        font-size: 15px;
+    }
+}
+
+/* Для планшетов (промежуточный размер) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .emoji-containers {
+        gap: 20px;
+    }
+
+    .row-section {
+        padding: 24px;
+    }
+
+    .row-emoji {
+        width: 48px;
+        height: 48px;
+        font-size: 28px;
+    }
+
+    .row-title {
+        font-size: 22px;
+    }
+
+    .row-text {
+        font-size: 17px;
+    }
+}
 
 @media (max-width: 480px) {
     .header1 {
