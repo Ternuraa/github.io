@@ -319,78 +319,7 @@ html, body {
     }
 }
 
-@media (max-width: 768px) {
 
-      .type-arrow {
-          width: 16px;
-          height: 16px;
-      }
-
-    .header1 {
-        margin-left: 24px;
-        margin-right: 24px;
-    }
-
-    .main-content-container {
-        padding: 0 24px;
-    }
-
-    .b1 {
-        font-size: 36px;
-        margin-top: 200px;
-    }
-
-    .description-container {
-        flex-direction: column;
-        gap: 16px;
-        margin-bottom: 64px;
-    }
-
-    .header2-wrapper {
-        margin: 64px 0;
-    }
-
-    .header2 {
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .c1 {
-        width: 100%;
-        padding-right: 0;
-    }
-
-    .c3 {
-        font-size: 32px;
-    }
-
-    .phones-wrapper {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .phone-image {
-        width: 320px;
-        height: 692px;
-    }
-
-    .gif-wrapper {
-        width: 100%;
-        max-width: 436px;
-        height: auto;
-        min-height: 500px;
-    }
-
-    .emoji-row {
-        flex-direction: column;
-    }
-}
-.case-container {
-    display: flex;
-    justify-content: center;
-    margin: 64px 0;
-    width: 100%;
-}
 /* Адаптация таблицы с эмодзи для мобильных устройств */
 @media (max-width: 768px) {
     .emoji-containers {
