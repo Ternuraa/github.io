@@ -16,9 +16,9 @@
 }
 
 .logo-text {
-    font-size: 2.1vw;
+    font-size: 2.5vw;
     line-height: 8.5vw;
-    letter-spacing: 0.19vw;
+    letter-spacing: 0.2vw;
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     display: flex;
@@ -79,9 +79,9 @@
 }
 
 .menu-letters {
-    font-size: 2.1vw;
+    font-size: 2.5vw;
     line-height: 8.5vw;
-    letter-spacing: 0.19vw;
+    letter-spacing: 0.2vw;
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     margin-right: 1.7vw;
