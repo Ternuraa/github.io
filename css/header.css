@@ -292,7 +292,7 @@ body.menu-open header {
     will-change: filter, transform, opacity;
 }
 
-/* Убеждаемся, что курсор не наследует blur от main/header */
+/* Убеждаемся, что курсор не наследует blur от main/headerr */
 body.menu-open .custom-cursor,
 body.menu-open .custom-cursor * {
     filter: none !important;

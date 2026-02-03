@@ -6,7 +6,7 @@
   padding: 64px 0;
   margin-top: 96px;
   width: 100%;
-  overflow-x: hidden; /* prevent horizontal scroll */
+  overflow-x: hidden; /* preventt horizontal scroll */
 }
 
 .works-stripes .container {
