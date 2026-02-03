@@ -138,7 +138,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const figures = document.querySelectorAll('.figure, .figure1, .figure2');
     const arrow = document.querySelector('.arrow-icon');
-    
+
     // Контейнеры для эффекта разъезжания
     const heroNote = document.querySelector('.hero-note'); // ОТ ИДЕИ → влево
     const heroNote1 = document.querySelector('.hero-note1'); // ДО РАБОТАЮЩЕГО → вправо
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!isMobile) {
         let targetParallax = 0;
         let currentParallax = 0;
-        
+
         // Для текста — горизонтальное смещение
         let targetTextOffset = 0;
         let currentTextOffset = 0;
@@ -168,17 +168,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const render = function() {
             currentParallax += (targetParallax - currentParallax) * 0.60;
             currentTextOffset += (targetTextOffset - currentTextOffset) * 0.12; // плавнее
-            
+
             const transformValue = `translateY(-${currentParallax.toFixed(2)}px)`;
             figures.forEach(function(figure) {
                 figure.style.transform = transformValue;
             });
-            
+
             // Стрелка — вертикальный параллакс как раньше
             if (arrow) {
                 arrow.style.transform = transformValue;
             }
-            
+
             // Разъезжание контейнеров
             if (heroNote) {
                 heroNote.style.transform = `translateX(-${currentTextOffset.toFixed(2)}px)`;
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (heroNote2) {
                 heroNote2.style.transform = `translateX(-${currentTextOffset.toFixed(2)}px)`;
             }
-            
+
             requestAnimationFrame(render);
         };
 
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
         render();
         window.addEventListener('scroll', updateTarget, { passive: true });
     } else {
-        // На мобильных убираем все трансформации
+        // На мобильных убираем все трансформацииb
         figures.forEach(function(figure) {
             figure.style.transform = 'none';
         });
@@ -224,8 +224,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
-
-
-
 </body>
 </html>
