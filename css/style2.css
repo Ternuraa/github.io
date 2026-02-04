@@ -11,7 +11,7 @@ body {
 /* Анимация появления при скролле */
 .animate-on-scroll {
     opacity: 0;
-    transform: translateY(2vw);
+    transform: translateY(0vw);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
